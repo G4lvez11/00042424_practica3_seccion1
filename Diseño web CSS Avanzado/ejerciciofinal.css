@@ -1,0 +1,83 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --shadow: 0 4px 16px rgba(30, 144, 255, 0.15);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+.shopping-cart {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 32px 24px 24px 24px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: appear 1s ease-out forwards;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shopping-cart h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.shopping-cart ul {
+    list-style: disc inside;
+    padding-left: 0;
+}
+
+.shopping-cart li {
+    margin-bottom: 16px;
+}
+
+.shopping-cart a {
+    color: #1a0dab;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.cart-img {
+    display: block;
+    width: 120px;
+    margin: 12px 0 0 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+}
+
+.cart-total {
+    font-weight: bold;
+    margin: 18px 0 12px 0;
+}
+
+.btn-pay {
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+}
+
+.btn-pay:hover {
+    background: #1565c0;
+    transform: scale(1.05);
+    cursor: pointer;
+}
